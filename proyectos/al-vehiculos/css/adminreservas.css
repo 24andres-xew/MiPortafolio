@@ -1,0 +1,256 @@
+/* Google Fonts(Poppins) */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  right: 20%;
+  top: 25%;
+  z-index: 1;
+  width: 60%;
+  height: 60%;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+.modal-content { 
+  text-align: center;
+  background-color: #d84141;
+  color: #000;
+  margin: 4% auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid;
+  width: 60%;
+  animation: slideIn 0.3s ease;
+}
+
+#eliminar_form{
+  height: 7rem;
+  border: 1ox solid;
+}
+
+.close {
+  color: #000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #111;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 14rem;
+  font-weight: 400;
+}
+
+.modal-form>input{
+  text-align: center;
+  padding: 0 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border: 1px solid;
+  height: 2rem;
+  width: 30vh;
+  font-weight: 800;
+  border-radius: 10px;
+}
+.modal-form>.pa{
+  background-color: #000;
+  color: #fff;
+  border: none;
+  height: 2rem;
+  border-radius: 10px;
+  width: 20%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.modal-form>.pa:hover{
+  transition: .4s ease-in-out;
+  background-color: #c7c7c7;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  height: 2rem;
+  border-radius: 10px;
+  width: 20%;
+  cursor: pointer;
+}
+
+
+
+/* Estilos llamativos para el index y otras secciones */
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #c7c7c7;
+}
+
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  width: 100%;
+  padding: 0 20px;
+}
+
+
+header>nav{
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+
+
+header>nav>ul{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 30px;
+  list-style: none;
+}
+
+header>nav>ul>li>a{
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+
+  font-size: 1.1rem;
+}
+
+header>nav>ul>li>a:hover{
+  color: #FF0000;
+}
+
+header>nav>ul>li>a.active{
+  color: #FF0000;
+}
+
+header>nav>ul>li>a::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color:#FF0000;
+  transition: width .3s;
+}
+
+header>nav>ul>li>a:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+
+header>div>svg text {
+animation: stroke 5s infinite alternate;
+stroke-width: 2;
+stroke: #FF0000;
+font-size: 30px;
+  letter-spacing: 1px;
+}
+
+@keyframes stroke {
+	0%   {
+		fill: rgba(255,0,0,0); stroke: rgba(255,0,0,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(255,0,0,0); stroke: rgba(255,0,0,1); }
+	80%  {fill: rgba(255,0,0,0); stroke: rgba(255,0,0,1); stroke-width: 3; }
+	100% {
+		fill: rgba(255,0,0,1); stroke: rgba(255,0,0,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+
+main {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+th {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Animaciones */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section>.boton{
+  border:none;
+  background-image: linear-gradient(
+      150deg,
+      #FF0000,
+      #09f,
+      #FF0000);
+      border-radius: 10px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px;
+      font-size: 10px;
+      cursor: pointer;
+      transition: .3s;
+      margin: 0 10px;
+}
+
+section>.boton>span{
+  background-color: #000;
+ padding: 10px 15px;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+section>.boton:hover span{
+  background: none;
+}
+
+section>.botton:active{
+  transform: scale(0,9);
+
+}
